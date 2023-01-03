@@ -1,5 +1,12 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] + array[j] === target) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 /* 
@@ -7,7 +14,11 @@ function hasTargetSum(array, target) {
 */
 
 /* 
-  Add your pseudocode here
+function that receives a list of numbers AND a number
+take the first number in list and sum it against all of the other numbers in the list
+if any of the resulting numbers === the number passed in as the 2nd argument, return TRUE
+continue to repeat the process until you've passed through each item in the array, summing it against the other numbers in the array
+if none of the resulting sums === the number passed in as the 2nd argument, return FALSE
 */
 
 /*
